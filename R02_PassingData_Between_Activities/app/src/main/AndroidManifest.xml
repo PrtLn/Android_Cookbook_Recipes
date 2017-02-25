@@ -8,13 +8,25 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".MainActivity"
+        android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-    </application>
 
-</manifest>
+        <activity
+            android:name=".SecondActivity"
+            android:label="@string/title_second_activity" >
+        <intent-filter>
+            <action android:name="com.prt.r02_passingdata_between_activities.SecondActivity"/>
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+</application>
+
+    </manifest>
