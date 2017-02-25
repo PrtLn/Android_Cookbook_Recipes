@@ -13,7 +13,6 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:onClick="onClick"
-        android:text="Close"
+        android:text="Go back\n passing the data"
         android:textSize="30sp"/>
-
 </RelativeLayout>
