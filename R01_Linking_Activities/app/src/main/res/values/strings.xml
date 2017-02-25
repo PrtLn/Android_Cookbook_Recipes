@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">R01_Linking_Activities</string>
+    <string name="app_name">Linking</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="bye_world">Good bye world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>

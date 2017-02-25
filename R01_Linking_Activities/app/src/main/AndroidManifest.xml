@@ -8,11 +8,26 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".MainActivity"
+                  android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Activity2"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <!--remove this stroke if needed that other activities don't call this activity
+                (e.g, for case (4)-->
+                <!--
+                <action android:name="com.prt.r01_linking_activities.Activity2"/>
+                -->
+                <action android:name="com.prt.r01_linking_activities.Activity2"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
     </application>
