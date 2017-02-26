@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             Toast.makeText(context,
-                        "Received broadcast in MyBroadcastReceiver, " +
+                        "Received broadcast in MyBroadcastReceiver (registering receiver in the method), " +
                         " value received: " + intent.getStringExtra("key"),
                         Toast.LENGTH_SHORT).show();
         }
