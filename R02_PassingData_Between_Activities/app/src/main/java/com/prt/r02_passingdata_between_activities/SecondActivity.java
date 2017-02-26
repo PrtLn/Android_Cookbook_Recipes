@@ -21,7 +21,7 @@ public class SecondActivity extends AppCompatActivity {
 
         // get the data passed in using getIntExtra()
         Toast.makeText(this, Integer.toString(
-                getIntent().getIntExtra("str1", 0)),
+                getIntent().getIntExtra("age1", 0)),
                 Toast.LENGTH_SHORT).show();
 
 
