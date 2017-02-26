@@ -2,7 +2,6 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -12,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:textSize="30sp"
         android:onClick="onClick"
-        android:text="Go to Second Activity \n passing an object"/>
+        android:text="Go back to Main Activity"
+        android:textSize="30sp"/>
 </RelativeLayout>
