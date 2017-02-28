@@ -14,7 +14,7 @@ public class BootupReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         Toast.makeText(context, "App started", Toast.LENGTH_SHORT).show();
 
-        // start thr main activity of our app
+        // start the main activity of our app
         Intent i = new Intent(context, MainActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(i);
