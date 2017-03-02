@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     TimePicker timePicker;
@@ -21,16 +24,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnClick(View view) {
-        int hour;
-        int minute;
+        NumberFormat formatter = new DecimalFormat("00");
+        String hour;
+        String minute;
         if (Build.VERSION.SDK_INT >= 23) {
-            hour = timePicker.getHour();
-            minute = timePicker.getMinute();
+            hour = formatter.format(timePicker.getHour());
+            minute = formatter.format(timePicker.getMinute());
         } else {
-            hour = timePicker.getCurrentHour();
-            minute = timePicker.getCurrentMinute();
+            hour = formatter.format(timePicker.getCurrentHour());
+            minute = formatter.format(timePicker.getCurrentMinute());
         }
-
         Toast.makeText(getBaseContext(),
                 "Time selected: " + hour + ":" + minute,
                 Toast.LENGTH_SHORT).show();
