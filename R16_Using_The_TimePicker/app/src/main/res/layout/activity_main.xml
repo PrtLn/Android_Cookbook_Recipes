@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_above="@+id/timePicker"
+        android:layout_below="@+id/timePicker"
         android:layout_marginTop="29dp"
         android:onClick="btnClick"
         android:text="I am all set!"/>

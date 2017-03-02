@@ -1,9 +1,6 @@
 package com.prt.r16_using_the_timepicker;
 
-import android.icu.text.DecimalFormat;
-import android.icu.text.NumberFormat;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,20 +20,19 @@ public class MainActivity extends AppCompatActivity {
         timePicker.setIs24HourView(true);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
     public void btnClick(View view) {
-        NumberFormat formatter = new DecimalFormat("00");
-        Toast.makeText(getBaseContext(),
-                "Time selected:" +
-        timePicker.getHour() +
-        ":" + formatter.format(timePicker.getMinute()),
-                Toast.LENGTH_SHORT).show();
+        int hour;
+        int minute;
+        if (Build.VERSION.SDK_INT >= 23) {
+            hour = timePicker.getHour();
+            minute = timePicker.getMinute();
+        } else {
+            hour = timePicker.getCurrentHour();
+            minute = timePicker.getCurrentMinute();
+        }
 
-        /*
-        if (Build.VERSION.SDK_INT >= 23 )
-            myTimePickerView.getHour();
-        else
-            myTimePickerView.getCurrentHour();
-        */
+        Toast.makeText(getBaseContext(),
+                "Time selected: " + hour + ":" + minute,
+                Toast.LENGTH_SHORT).show();
     }
 }
