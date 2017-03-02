@@ -19,7 +19,15 @@ public class MainActivity extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setBuiltInZoomControls(true);
 
-        webView.loadUrl("http://cgimg.s3.amazonaws.com/cg/g62/54062/54062_1315855037_orig.jpg");
+        // Loading from web (image)
+//        webView.loadUrl("http://cgimg.s3.amazonaws.com/cg/g62/54062/54062_1315855037_orig.jpg");
+
+        //  Loading from a String
+        final String mimeType = "text/html";
+        final String encoding = "UTF-8";
+        String html = "<H1>A simple HTML page</H1><body>" +
+                "<p>The quik brown fox jumps over the lazy dog</p></body?";
+        webView.loadDataWithBaseURL("", html, mimeType, encoding, "");
     }
 
     private class Callback extends WebViewClient {
