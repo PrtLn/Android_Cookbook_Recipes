@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setBuiltInZoomControls(true);
 
-        // (1) Loading from web (image)
+        // (1) Loading from web
 //        webView.loadUrl("http://cgimg.s3.amazonaws.com/cg/g62/54062/54062_1315855037_orig.jpg");
 
         // (2) Loading from a String
