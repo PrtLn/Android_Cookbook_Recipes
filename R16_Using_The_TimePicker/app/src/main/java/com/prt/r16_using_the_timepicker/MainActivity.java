@@ -25,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void btnClick(View view) {
         NumberFormat formatter = new DecimalFormat("00");
-        String hour;
+        int hour;
         String minute;
         if (Build.VERSION.SDK_INT >= 23) {
-            hour = formatter.format(timePicker.getHour());
+            hour = timePicker.getHour();
             minute = formatter.format(timePicker.getMinute());
         } else {
-            hour = formatter.format(timePicker.getCurrentHour());
+            hour = timePicker.getCurrentHour();
             minute = formatter.format(timePicker.getCurrentMinute());
         }
         Toast.makeText(getBaseContext(),
