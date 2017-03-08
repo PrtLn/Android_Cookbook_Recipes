@@ -37,8 +37,13 @@ public class MainActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // using custom array adapter
-        CustomArrayAdapter adapter = new CustomArrayAdapter(this, cities, imageIDs);
+        // (1) using custom array adapter
+//        CustomArrayAdapter adapter = new CustomArrayAdapter(this, cities, imageIDs);
+//        setListAdapter(adapter);
+
+        // (2) using custom array adapter (with recycling)
+        AdvancedCustomArrayAdapter adapter =
+                new AdvancedCustomArrayAdapter(this, cities, imageIDs);
         setListAdapter(adapter);
     }
 }
